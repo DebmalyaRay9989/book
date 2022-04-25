@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Genre Prediction</title>
+</head>
+
+<body>
+
+    <div class="container my-4">
+
+         <h2 class="my-4 text-center">Book Genre Prediction</h2>
+
+    
+
+        <div class="alert alert-success my-4" role="alert">
+
+            <div class="container">
+                <div class="content">
+
+                    <h1>Book Summary Dataset</h1>
+
+                    <p>
+                        Book Summary Dataset 
+                    </p>
+                    <p>
+
+                    </p>
+                    <p>
+                        
+                    </p>
+
+                    <a href="data/booksummaries.tar.gz">booksummaries.tar.gz</a> [17M]
+                    <p>
+
+                    </p>
+                    <hr>
+
+                    <p>
+                        This dataset contains plot summaries for 16,559 books extracted from Wikipedia, along with aligned metadata from Freebase, including book author, title, and genre. </p>
+
+
+
+                    <h3> Example </h3>
+
+                    The following example illustrates the data and metadata available  <em>White
+                            Noise</em>.
+                    <p>
+
+                    </p>
+                    <h4>Book metadata</h4>
+                    <table border="1" width="90%">
+                        <tbody>
+                            <tr>
+                                <td>Wikipedia ID</td>
+                                <td>1166383</td>
+                            </tr>
+                            <tr>
+                                <td>Freebase ID</td>
+                                <td>/m/04cvx9</td>
+                            </tr>
+                            <tr>
+                                <td>Book title</td>
+                                <td>White Noise</td>
+                            </tr>
+                            <tr>
+                                <td>Book author</td>
+                                <td>Don DeLillo</td>
+                            </tr>
+                            <tr>
+                                <td>Publication date</td>
+                                <td>1985-01-21</td>
+                            </tr>
+                            <tr>
+                                <td>Genres</td>
+                                <td>Novel, Postmodernism, Speculative fiction, Fiction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Plot summary</h4>
+                    Write a short summary about the Book . The app will predict correctly to which Genre it belongs to.
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Form -->
+
+        <div></div>
+
+        <h2 class="my-4 text-center">Book Genre Prediction</h2>
+
+        <form class="my-4" action="/" method="POST">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter the Summary of the Book</label>
+                <textarea class="form-control" id="summary" name="summary" rows="3"></textarea>
+            </div>
+
+            <!-- button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+
+        </form>
+
+        {%if showresult%}
+            
+            <div class = "container my-4">
+              
+               <div class="alert alert-success" role="alert">
+
+                    <p>Your Summary : {{text}}...</p>
+                
+                    <p>Predicted Genre for the summary is : <span style = "color:red;font-size:1 rem;">{{genre}}</p>
+                    <hr>
+
+                </div>
+            </div>
+        {%endif%}
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
